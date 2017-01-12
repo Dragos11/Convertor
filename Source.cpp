@@ -1,27 +1,27 @@
 #include <iostream>
 using namespace std;
 
-int mtoinch(float a)
+double mtoinch(float a)
 {
 	return a / 0.0254;
 }
-int mtofeet(float a)
+double mtofeet(float a)
 {
 	return a * 3, 28;
 }
-int inchtom(float a)
+double inchtom(float a)
 {
 	return a * 0.0254;
 }
-int inchtofeet(float a)
+double inchtofeet(float a)
 {
-	return a * 0, 08;
+	return a * 0.08;
 }
-int feettom(float a)
+double feettom(float a)
 {
-	retunr a* 0.3048;
+	return a * 0.3048;
 }
-int feettoinch(float a)
+double feettoinch(float a)
 {
 	return a * 12;
 }
@@ -36,10 +36,10 @@ void Lungime()
 		cout << "Introduceti valorile" << endl;
 	cin >> val;
 	if (val == 0)
-		return 0;
+		cout << "0";
 	else
 	if (unitate1 == unitate2)
-		return val;
+		cout << val;
 	else
 	if (unitate1 == 1 && unitate2 == 2)
 		cout << mtoinch(val);
@@ -61,27 +61,27 @@ void Lungime()
 	
 
 }
-int mtohectar(float a)
+double mtohectar(float a)
 {
-	return a / 10000;
+	return a/10000;
 }
-int mtoar(float a)
+double mtoar(float a)
 {
 	return a / 100;
 }
-int hectartom(float a)
+double hectartom(float a)
 {
 	return a * 10000;
 }
-int hectartoar(float a)
+double hectartoar(float a)
 {
 	return a * 100;
 }
-int artom(float a)
+double artom(float a)
 {
 	return a * 100;
 }
-int artohectar(float a)
+double artohectar(float a)
 {
 	return a / 100;
 }
@@ -94,29 +94,161 @@ void Arie()
 	cout << "1.m^2" << endl << "2.hectar" << endl << "3.ar" << endl;
 	cin >> unitate1;
 	cin >> unitate2;
-	if (val == 0)
-		return 0;
+	cout << "Introduceti valoarea" << endl;
+	cin >> val;
+	if(val == 0)
+		 cout<< "0";
 	else
-	if (unitate1 = unitate2)
-		return val;
+	if(unitate1 == unitate2)
+		cout<< val;
 	else
-	if (unitate1 == 1 && unitate2 == 2)
+	if(unitate1 == 1 && unitate2 == 2)
 		cout << mtohectar(val);
 	else
-	if (unitate1 == 1 && unitate2 == 3)
-		return mtoar(val);
+	if(unitate1 == 1 && unitate2 == 3)
+		cout << mtoar(val);
+	else
+	if(unitate1 == 2 && unitate2 == 1)
+		cout << hectartom(val);
+	else
+	if(unitate1 == 2 && unitate2 == 3)
+		cout << hectartoar(val);
+	else 
+	if(unitate1 == 3 && unitate2 == 1)
+		cout << artom(val);
+	else
+	if(unitate1 == 3 && unitate2 == 2)
+		cout << artohectar(val);
+}
+double mtolitru(float a)
+{
+	return a * 1000;
+}
+double litrutom(float a)
+{
+	return a / 1000;
+}
+void Volum()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Alegeti unitatea de masura:" << endl;
+	cout << "1.m^3" << endl << "2.Litru" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:" << endl;
+	if (val == 0)
+		cout << "0";
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << mtolitru(val);
 	else
 	if (unitate1 == 2 && unitate2 == 1)
-		return hectartom(val);
+		cout << litrutom(val);
+
+}
+double sectomin(float a)
+{
+	return a / 60;
+}
+double sectoh(float a)
+{
+	return a / 3600;
+}
+double sectozi(float a)
+{
+	return a / 86400;
+}
+double mintosec(float a)
+{
+	return a * 60;
+}
+double mintoh(float a)
+{
+	return a / 60;
+}
+double mintozi(float a)
+{
+	return a / 1440;
+}
+double htosec(float a)
+{
+	return a * 3600;
+}
+double htomin(float a)
+{
+	return a * 60;
+}
+double htozi(float a)
+{
+	return a / 24;
+}
+double zitosec(float a)
+{
+	return a * 86400;
+}
+double zitomin(float a)
+{
+	return a * 24 * 60;
+}
+double zitoh(float a)
+{
+	return a * 24;
+}
+void Timp()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatea de masura:" << endl;
+	cout << "1.secunda" << endl << "2.minut" << endl << "3.ora" << endl << "4.zile" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << "0";
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << sectomin(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << sectoh(val);
+	else
+	if (unitate1 == 1 && unitate2 == 4)
+		cout << sectozi(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << mintosec(val);
 	else
 	if (unitate1 == 2 && unitate2 == 3)
-		return hectartoar(val);
-	else 
+		cout << mintoh(val);
+	else
+	if (unitate1 == 2 && unitate2 == 4)
+		cout << mintozi(val);
+	else
 	if (unitate1 == 3 && unitate2 == 1)
-		return artom(val);
+		cout << htosec(val);
 	else
 	if (unitate1 == 3 && unitate2 == 2)
-		return artohectar(var);
+		cout << htomin(val);
+	else
+	if (unitate1 == 3 && unitate2 == 4)
+		cout << htozi(val);
+	else
+	if (unitate1 == 4 && unitate2 == 1)
+		cout << zitosec(val);
+	else
+	if (unitate1 == 4 && unitate2 == 2)
+		cout << zitomin(val);
+	else
+	if (unitate1 == 4 && unitate2 == 3)
+		cout << zitoh(val);
 }
 int main()
 {
@@ -145,7 +277,11 @@ int main()
 				Lungime();
 			if (cmd == 2)
 				Arie();
-			cout << "0.exit";
+			if (cmd == 3)
+				Volum();
+			if (cmd==4)
+
+			cout <<endl<< "0.exit";
 			cin >> cmf;
 			if (cmf == 0)
 				break;
