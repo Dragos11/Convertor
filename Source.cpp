@@ -250,6 +250,122 @@ void Timp()
 	if (unitate1 == 4 && unitate2 == 3)
 		cout << zitoh(val);
 }
+double mstokmh(float a)
+{
+	return a*3.6;
+}
+double mstomph(float a)
+{
+	return a*2.23;
+}
+double kmhtoms(float a)
+{
+	return a / 3.6;
+}
+double kmhtomph(float a)
+{
+	return a*0.62;
+}
+double mphtoms(float a)
+{
+	return a / 2.23;
+}
+double mphtokmh(float a)
+{
+	return a / 0.62;
+}
+void Viteza()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatea de masura:" << endl;
+	cout << "1.m/s" << endl << "2.km/h" << endl << "3.mph(mile/h)" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << "0";
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << mstokmh(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << mstomph(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << kmhtoms(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << kmhtomph(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << mphtoms(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << mphtokmh(val);
+}
+double ctof(float a)
+{
+	return a*33.8;
+}
+double ctok(float a)
+{
+	return a*274.15;
+}
+double ftoc(float a)
+{
+	return a / 33.8;
+}
+double ftok(float a)
+{
+	return a*255.92;
+}
+double ktoc(float a)
+{
+	return a / 274.15;
+}
+double ktof(float a)
+{
+	return a / 255.92;
+}
+void Temperatura()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatile de masura:" << endl;
+	cout << "1.Celsius" << endl << "2.Fahrenheit" << endl << "3.Kelvin" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << ctof(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << ctok(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << ftoc(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << ftok(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << ktoc(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << ktof(val);
+}
 int main()
 {
 	int cmd, cmf;
@@ -279,7 +395,9 @@ int main()
 				Arie();
 			if (cmd == 3)
 				Volum();
-			if (cmd==4)
+			if (cmd == 4)
+				Timp();
+			if (cmd==5)
 
 			cout <<endl<< "0.exit";
 			cin >> cmf;
