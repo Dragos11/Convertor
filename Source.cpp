@@ -30,9 +30,21 @@ void Lungime()
 	int unitate1, unitate2;
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
-	cout << "1.m" <<endl<< "2.inch"<<endl<< "3.feet"<<endl;
+	cout <<endl<< "1.m" <<endl<< "2.inch"<<endl<< "3.feet"<<endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Lungime();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Lungime();
+	}
 		cout << "Introduceti valorile" << endl;
 	cin >> val;
 	if (val == 0)
@@ -58,8 +70,9 @@ void Lungime()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << feettoinch(val);
-	
 
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
+	
 }
 double mtohectar(float a)
 {
@@ -91,8 +104,20 @@ void Arie()
 	float val;
 	cout << "Selectati unitatile de masura:(Numar)" << endl;
 	cout << "1.m^2" << endl << "2.hectar" << endl << "3.ar" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Arie();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Arie();
+	}
 	cout << "Introduceti valoarea" << endl;
 	cin >> val;
 	if(val == 0)
@@ -118,6 +143,8 @@ void Arie()
 	else
 	if(unitate1 == 3 && unitate2 == 2)
 		cout << artohectar(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double mtolitru(float a)
 {
@@ -133,8 +160,20 @@ void Volum()
 	float valoare;
 	cout << "Alegeti unitatea de masura:" << endl;
 	cout << "1.m^3" << endl << "2.Litru" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>2)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Volum();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>2)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Volum();
+	}
 	cout << "Introduceti valoarea:" << endl;
 	cin >> valoare;
 	if(valoare == 0)
@@ -148,6 +187,8 @@ void Volum()
 	else
 	if (unitate1 == 2 && unitate2 == 1)
 		cout << litrutom(valoare);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 
 }
 double sectomin(float a)
@@ -204,8 +245,20 @@ void Timp()
 	float val;
 	cout << "Selectati unitatea de masura:" << endl;
 	cout << "1.secunda" << endl << "2.minut" << endl << "3.ora" << endl << "4.zile" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>4)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Timp();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>4)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Timp();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -249,6 +302,8 @@ void Timp()
 	else
 	if (unitate1 == 4 && unitate2 == 3)
 		cout << zitoh(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double mstokmh(float a)
 {
@@ -280,8 +335,20 @@ void Viteza()
 	float val;
 	cout << "Selectati unitatea de masura:" << endl;
 	cout << "1.m/s" << endl << "2.km/h" << endl << "3.mph(mile/h)" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Viteza();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Viteza();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -307,6 +374,8 @@ void Viteza()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << mphtokmh(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double ctof(float a)
 {
@@ -338,8 +407,20 @@ void Temperatura()
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
 	cout << "1.Celsius" << endl << "2.Fahrenheit" << endl << "3.Kelvin" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Temperatura();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Temperatura();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -365,6 +446,8 @@ void Temperatura()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << ktof(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double kgtolbs(float a)
 {
@@ -396,8 +479,20 @@ void Masa()
 	float val;
 	cout << "Alegeti unitatile de masura" << endl;
 	cout << "1.Kilogram" << endl << "2.Pounds(lbs)" << endl << "3.Uncii(oz)" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Masa();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Masa();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -423,6 +518,8 @@ void Masa()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << oztolbs(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double jtocal(float a)
 {
@@ -454,8 +551,20 @@ void Energie()
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
 	cout << "1.Juli" << endl << "2.Calorii" << endl << "3.Watt ora" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Energie();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Energie();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -481,6 +590,8 @@ void Energie()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << wtocal(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double patobar(float a)
 {
@@ -512,8 +623,20 @@ void Presiune()
 	float val;
 	cout << "Selectati unitatea de masura:" << endl;
 	cout << "1.Pascal" << endl << "2.Bar" << endl << "3.Atmosfera" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Presiune();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Presiune();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -539,6 +662,8 @@ void Presiune()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << psitobar(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double kgmtoozgal(float a)
 {
@@ -570,8 +695,20 @@ void Densitate()
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
 	cout << "1.kg/m^3" << endl << "2.Uncie/Galon(UK)" << endl << "3.Livra/yd^3(US)" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Densitate();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		Densitate();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -597,6 +734,8 @@ void Densitate()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << lbydtoozgal(val);
+
+	cout << endl << "Introduceti '0' pentru a revenii la meniu";
 }
 double lkmtompg(float a)
 {
@@ -612,7 +751,7 @@ double mpgtolkm(float a)
 }
 double mpgtokml(float a)
 {
-	return lkmtokml(mpgtolkm(a));
+	return lkmtokml((float)mpgtolkm(a));
 }
 double kmltolkm(float a)
 {
@@ -620,7 +759,7 @@ double kmltolkm(float a)
 }
 double kmltompg(float a)
 {
-	return lkmtompg(kmltolkm(a));
+	return lkmtompg((float)kmltolkm(a));
 }
 void ConsumCombustibil()
 {
@@ -628,8 +767,20 @@ void ConsumCombustibil()
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
 	cout << "1.l/100km" << endl << "2.Mile/Galon(mpg)" << endl << "3.Km/l" << endl;
+	cout << "From: ";
 	cin >> unitate1;
+	if (unitate1<1 || unitate1>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		ConsumCombustibil();
+	}
+	cout << endl << "To: ";
 	cin >> unitate2;
+	if (unitate2<1 || unitate2>3)
+	{
+		cout << "Eroare:Nu ati ales unitatile corect:" << endl;
+		ConsumCombustibil();
+	}
 	cout << "Introduceti valoarea:";
 	cin >> val;
 	if (val == 0)
@@ -655,6 +806,8 @@ void ConsumCombustibil()
 	else
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << kmltompg(val);
+
+	cout <<endl<< "Introduceti '0' pentru a revenii la meniu";
 }
 int main()
 {
@@ -678,7 +831,6 @@ int main()
 		else 
 		while (true)
 		{
-			cout << "0.exit"<<endl;
 			if (cmd == 1)
 				Lungime();
 			else
