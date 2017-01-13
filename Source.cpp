@@ -7,7 +7,7 @@ double mtoinch(float a)
 }
 double mtofeet(float a)
 {
-	return a * 3, 28;
+	return a * 3.28;
 }
 double inchtom(float a)
 {
@@ -131,23 +131,24 @@ double litrutom(float a)
 void Volum()
 {
 	int unitate1, unitate2;
-	float val;
+	float valoare;
 	cout << "Alegeti unitatea de masura:" << endl;
 	cout << "1.m^3" << endl << "2.Litru" << endl;
 	cin >> unitate1;
 	cin >> unitate2;
 	cout << "Introduceti valoarea:" << endl;
-	if (val == 0)
+	cin >> valoare;
+	if(valoare == 0)
 		cout << "0";
 	else
 	if (unitate1 == unitate2)
-		cout << val;
+		cout << valoare;
 	else
 	if (unitate1 == 1 && unitate2 == 2)
-		cout << mtolitru(val);
+		cout << mtolitru(valoare);
 	else
 	if (unitate1 == 2 && unitate2 == 1)
-		cout << litrutom(val);
+		cout << litrutom(valoare);
 
 }
 double sectomin(float a)
@@ -366,6 +367,168 @@ void Temperatura()
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << ktof(val);
 }
+double kgtoq(float a)
+{
+	return a*0.01;
+}
+double kgtov(float a)
+{
+	return a*0.0001;
+}
+double qtokg(float a)
+{
+	return a / 0.01;
+}
+/*void Masa()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Alegeti unitatile de masura" << endl;
+	cout << "1.Kilogram" << endl << "2.Chintal" << endl << "3.Vagon" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1==1&&unitate2==2)
+
+	else
+	if (unitate1==1&&unitate2==3)
+
+	else
+	if (unitate1==2&&unitate2==1)
+
+	else
+	if (unitate1==2&&unitate2==3)
+
+	else
+	if (unitate1==3&&unitate2==1)
+
+	else
+	if (unitate1==3&&unitate2==2)
+
+}*/
+double jtocal(float a)
+{
+	return a*0.2388;
+}
+double jtow(float a)
+{
+	return a*0.00027;
+}
+double caltoj(float a)
+{
+	return a*4.1868;
+}
+double caltow(float a)
+{
+	return a*0.001163;
+}
+double wtoj(float a)
+{
+	return a * 3600;
+}
+double wtocal(float a)
+{
+	return a * 859.845;
+}
+void Energie()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatile de masura:" << endl;
+	cout << "1.Juli" << endl << "2.Calorii" << endl << "3.Watt ora" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << jtocal(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << jtow(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << caltoj(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << caltow(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << wtoj(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << wtocal(val);
+}
+double patobar(float a)
+{
+	return a*0.00001;
+}
+double patopsi(float a)
+{
+	return a* 0.000145;
+}
+double bartopa(float a)
+{
+	return a * 100000;
+}
+double bartopsi(float a)
+{
+	return a*14.5037;
+}
+double psitopa(float a)
+{
+	return a * 6 894.7572;
+}
+double psitobar(float a)
+{
+	return a*0.0689;
+}
+void Presiune()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatea de masura:" << endl;
+	cout << "1.Pascal" << endl << "2.Bar" << endl << "3.Atmosfera" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << patobar(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << patopsi(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << bartopa(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << bartopsi(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << psitopa(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << psitobar(val);
+}
 int main()
 {
 	int cmd, cmf;
@@ -397,7 +560,13 @@ int main()
 				Volum();
 			if (cmd == 4)
 				Timp();
-			if (cmd==5)
+			/*if (cmd==5)
+			if (cmd==6)
+			if (cmd==7)*/
+			if (cmd == 8)
+				Energie();
+			if (cmd == 9)
+				Presiune();
 
 			cout <<endl<< "0.exit";
 			cin >> cmf;
