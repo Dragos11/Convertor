@@ -30,7 +30,7 @@ void Lungime()
 	int unitate1, unitate2;
 	float val;
 	cout << "Selectati unitatile de masura:" << endl;
-	cout << "1.m" <<endl<< "2.inch"<<endl<< "3.feet";
+	cout << "1.m" <<endl<< "2.inch"<<endl<< "3.feet"<<endl;
 	cin >> unitate1;
 	cin >> unitate2;
 		cout << "Introduceti valorile" << endl;
@@ -89,7 +89,6 @@ void Arie()
 {
 	int unitate1, unitate2;
 	float val;
-	//Comentariu Test Repo on Git
 	cout << "Selectati unitatile de masura:(Numar)" << endl;
 	cout << "1.m^2" << endl << "2.hectar" << endl << "3.ar" << endl;
 	cin >> unitate1;
@@ -367,24 +366,36 @@ void Temperatura()
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << ktof(val);
 }
-double kgtoq(float a)
+double kgtolbs(float a)
 {
-	return a*0.01;
+	return a*2.2046;
 }
-double kgtov(float a)
+double kgtooz(float a)
 {
-	return a*0.0001;
+	return a*35.2739;
 }
-double qtokg(float a)
+double lbstokg(float a)
 {
-	return a / 0.01;
+	return a*0.4535;
 }
-/*void Masa()
+double lbstooz(float a)
+{
+	return a * 16;
+}
+double oztokg(float a)
+{
+	return a*0.02834;
+}
+double oztolbs(float a)
+{
+	return a*0.0625;
+}
+void Masa()
 {
 	int unitate1, unitate2;
 	float val;
 	cout << "Alegeti unitatile de masura" << endl;
-	cout << "1.Kilogram" << endl << "2.Chintal" << endl << "3.Vagon" << endl;
+	cout << "1.Kilogram" << endl << "2.Pounds(lbs)" << endl << "3.Uncii(oz)" << endl;
 	cin >> unitate1;
 	cin >> unitate2;
 	cout << "Introduceti valoarea:";
@@ -395,24 +406,24 @@ double qtokg(float a)
 	if (unitate1 == unitate2)
 		cout << val;
 	else
-	if (unitate1==1&&unitate2==2)
-
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << kgtolbs(val);
 	else
-	if (unitate1==1&&unitate2==3)
-
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << kgtooz(val);
 	else
-	if (unitate1==2&&unitate2==1)
-
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << lbstokg(val);
 	else
-	if (unitate1==2&&unitate2==3)
-
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << lbstooz(val);
 	else
-	if (unitate1==3&&unitate2==1)
-
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << oztokg(val);
 	else
-	if (unitate1==3&&unitate2==2)
-
-}*/
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << oztolbs(val);
+}
 double jtocal(float a)
 {
 	return a*0.2388;
@@ -489,7 +500,7 @@ double bartopsi(float a)
 }
 double psitopa(float a)
 {
-	return a * 6 894.7572;
+	return a * 6894.7572;
 }
 double psitobar(float a)
 {
@@ -529,6 +540,122 @@ void Presiune()
 	if (unitate1 == 3 && unitate2 == 2)
 		cout << psitobar(val);
 }
+double kgmtoozgal(float a)
+{
+	return a*0.16035;
+}
+double kgmtolbyd(float a)
+{
+	return a*0.008345;
+}
+double ozgaltokgm(float a)
+{
+	return a*6.2360;
+}
+double ozgaltolbyd(float a)
+{
+	return a*0.052042;
+}
+double lbydtokgm(float a)
+{
+	return a*119.8264;
+}
+double lbydtoozgal(float a)
+{
+	return a*19.215;
+}
+void Densitate()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatile de masura:" << endl;
+	cout << "1.kg/m^3" << endl << "2.Uncie/Galon(UK)" << endl << "3.Livra/yd^3(US)" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << kgmtoozgal(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << kgmtolbyd(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << ozgaltokgm(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << ozgaltolbyd(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << lbydtokgm(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << lbydtoozgal(val);
+}
+double lkmtompg(float a)
+{
+	return a*235.214;
+}
+double lkmtokml(float a)
+{
+	return 100 / a;
+}
+double mpgtolkm(float a)
+{
+	return a*2.3521;
+}
+double mpgtokml(float a)
+{
+	return lkmtokml(mpgtolkm(a));
+}
+double kmltolkm(float a)
+{
+	return 100 / a;
+}
+double kmltompg(float a)
+{
+	return lkmtompg(kmltolkm(a));
+}
+void ConsumCombustibil()
+{
+	int unitate1, unitate2;
+	float val;
+	cout << "Selectati unitatile de masura:" << endl;
+	cout << "1.l/100km" << endl << "2.Mile/Galon(mpg)" << endl << "3.Km/l" << endl;
+	cin >> unitate1;
+	cin >> unitate2;
+	cout << "Introduceti valoarea:";
+	cin >> val;
+	if (val == 0)
+		cout << val;
+	else
+	if (unitate1 == unitate2)
+		cout << val;
+	else
+	if (unitate1 == 1 && unitate2 == 2)
+		cout << lkmtompg(val);
+	else
+	if (unitate1 == 1 && unitate2 == 3)
+		cout << lkmtokml(val);
+	else
+	if (unitate1 == 2 && unitate2 == 1)
+		cout << mpgtolkm(val);
+	else
+	if (unitate1 == 2 && unitate2 == 3)
+		cout << mpgtokml(val);
+	else
+	if (unitate1 == 3 && unitate2 == 1)
+		cout << kmltolkm(val);
+	else
+	if (unitate1 == 3 && unitate2 == 2)
+		cout << kmltompg(val);
+}
 int main()
 {
 	int cmd, cmf;
@@ -554,21 +681,37 @@ int main()
 			cout << "0.exit"<<endl;
 			if (cmd == 1)
 				Lungime();
+			else
 			if (cmd == 2)
 				Arie();
+			else
 			if (cmd == 3)
 				Volum();
+			else
 			if (cmd == 4)
 				Timp();
-			/*if (cmd==5)
-			if (cmd==6)
-			if (cmd==7)*/
+			else
+			if (cmd == 5)
+				Viteza();
+			else
+			if (cmd == 6)
+				Temperatura();
+			else
+			if (cmd == 7)
+				Masa();
+			else
 			if (cmd == 8)
 				Energie();
+			else
 			if (cmd == 9)
 				Presiune();
-
-			cout <<endl<< "0.exit";
+			else
+			if (cmd == 10)
+				Densitate();
+			else
+			if (cmd == 11)
+				ConsumCombustibil();
+			cout << endl;
 			cin >> cmf;
 			if (cmf == 0)
 				break;
